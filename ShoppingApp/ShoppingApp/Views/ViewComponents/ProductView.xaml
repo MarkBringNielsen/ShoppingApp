@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingApp.Views.ViewComponents.ProductView">
+  <ContentView.Content>
+        <StackLayout>
+            <StackLayout Background="#f1f2f2">
+                <Image x:Name="productImage"
+                    Aspect="AspectFit"
+                    WidthRequest="{OnPlatform iOS=300, Android=250}"
+                    HorizontalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Background="#f1f2f2" Orientation="Horizontal">
+                <StackLayout>
+                    <Label x:Name="productName" TextColor="DarkSalmon" Margin="5,5,0,0"/>
+                    <Label x:Name="productPrice" Margin="5,0,0,5"/>
+                </StackLayout>
+                <Image Source="heart.png" WidthRequest="20" HorizontalOptions="EndAndExpand" Margin="10"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

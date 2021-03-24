@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:ShoppingApp.Views.ViewComponents"
+             x:Class="ShoppingApp.ShoePage">
+    <StackLayout>
+        <StackLayout Background="#F4846A" Orientation="Horizontal" >
+            <Image Source="back.png" WidthRequest="20" VerticalOptions="Center" Margin="10"/>
+            <Label Text="Shoes" Margin="20,15,20,10" FontSize="20" TextColor="White" />
+            <Image Source="search.png" WidthRequest="20" VerticalOptions="Center" Margin="0,10" HorizontalOptions="EndAndExpand"/>
+            <Image Source="more.png" WidthRequest="20" VerticalOptions="Center" Margin="5,10" HorizontalOptions="End"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Image Source="sort.png" WidthRequest="20" Margin="5"/>
+            <Label Text="Sort by" Margin="5"/>
+            <Label Text="|" Margin="25,5"/>
+            <Image Source="funnel.png" WidthRequest="20" Margin="5"/>
+            <Label Text="Filter" Margin="5"/>
+        </StackLayout>
+        <ScrollView Background="#ddd">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="250"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <views:ProductView ProductName="Black Shoe" ProductPrice="$34" Source="black_shoe.jpg" Grid.Row="0" Grid.Column="0"/>
+                <views:ProductView ProductName="Blue Shoe" ProductPrice="$36" Source="blue_shoe.jpg" Grid.Row="0" Grid.Column="1"/>
+                <views:ProductView ProductName="Converse Shoe" ProductPrice="$24" Source="converse_shoe.jpg" Grid.Row="1" Grid.Column="0"/>
+                <views:ProductView ProductName="Green Shoe" ProductPrice="$29" Source="green_shoe.jpg" Grid.Row="1" Grid.Column="1"/>
+                <views:ProductView ProductName="Greenish Shoe" ProductPrice="$33" Source="greenish_shoe.jpg" Grid.Row="2" Grid.Column="0"/>
+                <views:ProductView ProductName="Red Shoe" ProductPrice="$31" Source="red_shoe.jpg" Grid.Row="2" Grid.Column="1"/>
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
